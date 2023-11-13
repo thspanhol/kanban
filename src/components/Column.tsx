@@ -40,9 +40,9 @@ const mockTasks: TaskModel[] = [
 ];
 
 function Column({ column }: { column: ColumnType }) {
-  const ColumnTasks = mockTasks.map((task, index) => {
-    <Task key={task.id} task={task} index={index} />;
-  });
+  const ColumnTasks = mockTasks.map((task, index) => (
+    <Task key={task.id} task={task} index={index} />
+  ));
 
   return (
     <Box>
