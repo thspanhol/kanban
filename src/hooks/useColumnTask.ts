@@ -9,6 +9,10 @@ function useColumnTasks(column: ColumnType) {
 
   const addEmptyTask = useCallback(() => {
     console.log(`Adding new empty task to ${column} column`);
+
+    setTasks((allTasks) => {
+      
+    })
   }, [column, setTasks]);
 }
 
