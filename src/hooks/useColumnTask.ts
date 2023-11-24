@@ -11,8 +11,8 @@ function useColumnTasks(column: ColumnType) {
     console.log(`Adding new empty task to ${column} column`);
 
     setTasks((allTasks) => {
-      const columnTasks = allTasks[column]
-    })
+      const columnTasks = allTasks[column];
+    });
   }, [column, setTasks]);
 }
 
