@@ -12,6 +12,10 @@ function useColumnTasks(column: ColumnType) {
 
     setTasks((allTasks) => {
       const columnTasks = allTasks[column];
+
+      if (columnTasks.length > MAX_TASK_PER_COLUMN) {
+        
+      }
     });
   }, [column, setTasks]);
 }
