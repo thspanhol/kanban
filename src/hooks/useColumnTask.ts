@@ -14,6 +14,8 @@ function useColumnTasks(column: ColumnType) {
       const columnTasks = allTasks[column];
 
       if (columnTasks.length > MAX_TASK_PER_COLUMN) {
+        console.log('Too many task!');
+        return allTasks;
       }
     });
   }, [column, setTasks]);
