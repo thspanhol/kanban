@@ -17,6 +17,9 @@ function useColumnTasks(column: ColumnType) {
         console.log("Too many task!");
         return allTasks;
       }
+
+      const newColumnTask: TaskModel = {}
+
     });
   }, [column, setTasks]);
 }
