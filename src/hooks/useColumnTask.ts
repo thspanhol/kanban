@@ -18,8 +18,7 @@ function useColumnTasks(column: ColumnType) {
         return allTasks;
       }
 
-      const newColumnTask: TaskModel = {}
-
+      const newColumnTask: TaskModel = {};
     });
   }, [column, setTasks]);
 }
