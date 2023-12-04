@@ -18,7 +18,12 @@ function useColumnTasks(column: ColumnType) {
         return allTasks;
       }
 
-      const newColumnTask: TaskModel = {};
+      const newColumnTask: TaskModel = {
+        id: uuidv4(),
+        title: `New ${column} task`,
+        color: pickChakraRandomColor('.300'),
+        column,
+      };
     });
   }, [column, setTasks]);
 }
