@@ -24,6 +24,11 @@ function useColumnTasks(column: ColumnType) {
         color: pickChakraRandomColor(".300"),
         column,
       };
+
+      return {
+        ...allTasks,
+        [column]: [newColumnTask, ...columnTasks],
+      }
     });
   }, [column, setTasks]);
 }
