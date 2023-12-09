@@ -28,7 +28,7 @@ function useColumnTasks(column: ColumnType) {
       return {
         ...allTasks,
         [column]: [newColumnTask, ...columnTasks],
-      }
+      };
     });
   }, [column, setTasks]);
 }
