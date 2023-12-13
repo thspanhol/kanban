@@ -9,3 +9,7 @@ const colors = [
   "purple",
   "pink",
 ];
+
+export function pickChakraRandomColor(variant = '') {
+  
+}
