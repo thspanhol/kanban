@@ -11,5 +11,5 @@ const colors = [
 ];
 
 export function pickChakraRandomColor(variant = '') {
-  
+  const color = colors[];
 }
