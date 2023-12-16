@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 import { ColumnType } from "../utils/enums";
 import { TaskModel } from "../utils/models";
 import useTaskCollection from "./useTaskCollection";
+import { pickChakraRandomColor } from "../utils/helpers";
 
 function useColumnTasks(column: ColumnType) {
   const [tasks, setTasks] = useTaskCollection();
