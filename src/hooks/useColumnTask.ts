@@ -32,6 +32,11 @@ function useColumnTasks(column: ColumnType) {
       };
     });
   }, [column, setTasks]);
+
+  return {
+    tasks: tasks[column],
+    addEmptyTask,
+  };
 }
 
 export default useColumnTasks;
