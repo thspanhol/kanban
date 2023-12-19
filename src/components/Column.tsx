@@ -41,7 +41,7 @@ const mockTasks: TaskModel[] = [
 ];
 
 function Column({ column }: { column: ColumnType }) {
-const {tasks, addEmptyTask} = useColumnTasks(column);
+  const { tasks, addEmptyTask } = useColumnTasks(column);
 
   const ColumnTasks = mockTasks.map((task, index) => (
     <Task key={task.id} task={task} index={index} />
