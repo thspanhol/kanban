@@ -10,6 +10,7 @@ import {
 import { ColumnType } from "../utils/enums";
 import { TaskModel } from "../utils/models";
 import Task from "./Task";
+import useColumnTasks from "../hooks/useColumnTask";
 
 const ColumnColorScheme: Record<ColumnType, string> = {
   Todo: "gray",
@@ -40,6 +41,8 @@ const mockTasks: TaskModel[] = [
 ];
 
 function Column({ column }: { column: ColumnType }) {
+const {tasks, addEmptyTask} = useColumnTasks(column);
+
   const ColumnTasks = mockTasks.map((task, index) => (
     <Task key={task.id} task={task} index={index} />
   ));
