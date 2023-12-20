@@ -19,31 +19,10 @@ const ColumnColorScheme: Record<ColumnType, string> = {
   Completed: "green",
 };
 
-const mockTasks: TaskModel[] = [
-  {
-    id: "1",
-    title: "Task 1",
-    column: ColumnType.TO_DO,
-    color: "red.300",
-  },
-  {
-    id: "2",
-    title: "Task 2",
-    column: ColumnType.TO_DO,
-    color: "blue.300",
-  },
-  {
-    id: "3",
-    title: "Task 3",
-    column: ColumnType.TO_DO,
-    color: "green.300",
-  },
-];
-
 function Column({ column }: { column: ColumnType }) {
   const { tasks, addEmptyTask } = useColumnTasks(column);
 
-  const ColumnTasks = mockTasks.map((task, index) => (
+  const ColumnTasks = tasks.map((task, index) => (
     <Task key={task.id} task={task} index={index} />
   ));
 
@@ -70,6 +49,7 @@ function Column({ column }: { column: ColumnType }) {
         colorScheme="black"
         aria-label="add-task"
         icon={<AddIcon />}
+        onClick={addEmptyTask}
       />
       <Stack
         direction={{ base: "row", md: "column" }}
