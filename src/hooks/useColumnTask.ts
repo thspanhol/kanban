@@ -33,6 +33,11 @@ function useColumnTasks(column: ColumnType) {
     });
   }, [column, setTasks]);
 
+  const updateTask = useCallback(
+
+    [],
+  );
+
   return {
     tasks: tasks[column],
     addEmptyTask,
