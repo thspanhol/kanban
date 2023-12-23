@@ -33,7 +33,12 @@ function useColumnTasks(column: ColumnType) {
     });
   }, [column, setTasks]);
 
-  const updateTask = useCallback([]);
+  const updateTask = useCallback(
+    (id: TaskModel['id'], updateTask: Omit<Partial<TaskModel>, 'id'>) => {
+
+    },
+    [column, setTasks],
+    );
 
   return {
     tasks: tasks[column],
