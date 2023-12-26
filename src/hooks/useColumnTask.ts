@@ -34,7 +34,9 @@ function useColumnTasks(column: ColumnType) {
   }, [column, setTasks]);
 
   const updateTask = useCallback(
-    (id: TaskModel["id"], updateTask: Omit<Partial<TaskModel>, "id">) => {},
+    (id: TaskModel["id"], updateTask: Omit<Partial<TaskModel>, "id">) => {
+      console.log(`Updating task ${id} with ${JSON.stringify(updateTask)}`);
+    },
     [column, setTasks]
   );
 
