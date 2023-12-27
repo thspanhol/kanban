@@ -36,7 +36,16 @@ function useColumnTasks(column: ColumnType) {
   const updateTask = useCallback(
     (id: TaskModel["id"], updateTask: Omit<Partial<TaskModel>, "id">) => {
       console.log(`Updating task ${id} with ${JSON.stringify(updateTask)}`);
-      setTasks((allTasks) => {});
+      setTasks((allTasks) => {
+        const columnTasks = allTasks[column];
+
+        return {
+          ...allTasks,
+          [column]: columnTasks.map((task) =>
+          
+          ),
+        }
+      });
     },
     [column, setTasks]
   );
