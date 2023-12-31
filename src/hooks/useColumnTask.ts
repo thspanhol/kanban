@@ -42,7 +42,7 @@ function useColumnTasks(column: ColumnType) {
         return {
           ...allTasks,
           [column]: columnTasks.map((task) =>
-            task.id == id ? { ...task, ...updateTask } : task,
+            task.id == id ? { ...task, ...updateTask } : task
           ),
         };
       });
