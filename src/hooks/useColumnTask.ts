@@ -51,10 +51,10 @@ function useColumnTasks(column: ColumnType) {
   );
 
   const deleteTask = useCallback(
-    (id: TaskModel['id']) => {
+    (id: TaskModel["id"]) => {
       console.log(`Removing task ${id}..`);
     },
-    [column, setTasks],
+    [column, setTasks]
   );
 
   return {
