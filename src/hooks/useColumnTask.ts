@@ -56,6 +56,10 @@ function useColumnTasks(column: ColumnType) {
 
       setTasks((allTasks) => {
         const columnTasks = allTasks[column];
+        return {
+          ...allTasks,
+          [column]: columnTasks.filter((task) => task.id !== id),
+        }
       });
     },
     [column, setTasks]
