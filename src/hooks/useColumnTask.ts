@@ -68,6 +68,8 @@ function useColumnTasks(column: ColumnType) {
   return {
     tasks: tasks[column],
     addEmptyTask,
+    updateTask,
+    deleteTask,
   };
 }
 
