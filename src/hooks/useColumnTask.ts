@@ -59,7 +59,7 @@ function useColumnTasks(column: ColumnType) {
         return {
           ...allTasks,
           [column]: columnTasks.filter((task) => task.id !== id),
-        }
+        };
       });
     },
     [column, setTasks]
