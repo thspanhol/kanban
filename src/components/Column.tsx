@@ -24,7 +24,13 @@ function Column({ column }: { column: ColumnType }) {
     useColumnTasks(column);
 
   const ColumnTasks = tasks.map((task, index) => (
-    <Task key={task.id} task={task} index={index} onDelete={deleteTask} onUpdate={updateTask} />
+    <Task
+      key={task.id}
+      task={task}
+      index={index}
+      onDelete={deleteTask}
+      onUpdate={updateTask}
+    />
   ));
 
   return (
