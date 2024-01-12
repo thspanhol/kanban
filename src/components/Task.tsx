@@ -5,6 +5,7 @@ import { TaskModel } from "../utils/models";
 type TaskProps = {
   index: number;
   task: TaskModel;
+  onUpdate: () => void;
 };
 
 function Task({ index, task }: TaskProps) {
