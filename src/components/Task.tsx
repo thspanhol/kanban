@@ -5,8 +5,8 @@ import { TaskModel } from "../utils/models";
 type TaskProps = {
   index: number;
   task: TaskModel;
-  onUpdate: (id: TaskModel['id'], updatedTask: TaskModel) => void;
-  onDelete: (id: TaskModel['id']) => void;
+  onUpdate: (id: TaskModel["id"], updatedTask: TaskModel) => void;
+  onDelete: (id: TaskModel["id"]) => void;
 };
 
 function Task({ index, task }: TaskProps) {
