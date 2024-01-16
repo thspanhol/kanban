@@ -9,7 +9,12 @@ type TaskProps = {
   onDelete: (id: TaskModel["id"]) => void;
 };
 
-function Task({ index, task, onUpdate: handleUpdate, onDelete: handleDelete, }: TaskProps) {
+function Task({
+  index,
+  task,
+  onUpdate: handleUpdate,
+  onDelete: handleDelete,
+}: TaskProps) {
   return (
     <Box
       as="div"
