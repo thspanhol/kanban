@@ -14,6 +14,7 @@ function Task({
   task,
   onUpdate: handleUpdate,
   onDelete: handleDelete,
+  //teste comentário
 }: TaskProps) {
   return (
     <Box
