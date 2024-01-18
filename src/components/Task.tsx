@@ -14,8 +14,8 @@ function Task({
   task,
   onUpdate: handleUpdate,
   onDelete: handleDelete,
-  //teste comentário
 }: TaskProps) {
+  const handleTitleChange = ( ) => {};
   return (
     <Box
       as="div"
