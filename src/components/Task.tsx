@@ -15,7 +15,7 @@ function Task({
   onUpdate: handleUpdate,
   onDelete: handleDelete,
 }: TaskProps) {
-  const handleTitleChange = ( ) => {};
+  const handleTitleChange = (e: React.ChangeEvent<HTMLTextAreaElement> ) => {};
   return (
     <Box
       as="div"
