@@ -17,7 +17,7 @@ function Task({
 }: TaskProps) {
   const handleTitleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const newTitle = e.target.value;
-    handleUpdate(task.id);
+    handleUpdate(task.id, { ...task, title: newTitle });
   };
   return (
     <Box
