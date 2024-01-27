@@ -20,7 +20,9 @@ function Task({
     handleUpdate(task.id, { ...task, title: newTitle });
   };
 
-  const handleDeleteClick = () => {};
+  const handleDeleteClick = () => {
+    handleDelete(task.id);
+  };
 
   return (
     <Box
