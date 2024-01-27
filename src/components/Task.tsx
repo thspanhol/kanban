@@ -19,6 +19,9 @@ function Task({
     const newTitle = e.target.value;
     handleUpdate(task.id, { ...task, title: newTitle });
   };
+
+  const handleDeleteClick = () => {};
+
   return (
     <Box
       as="div"
