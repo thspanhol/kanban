@@ -53,6 +53,7 @@ function Task({
         _groupHover={{
           opacity: 1,
         }}
+        onClick={handleDeleteClick}
       />
       <Textarea
         value={task.title}
@@ -65,6 +66,7 @@ function Task({
         maxH={200}
         focusBorderColor="none"
         color="gray.700"
+        onChange={handleTitleChange}
       />
     </Box>
   );
