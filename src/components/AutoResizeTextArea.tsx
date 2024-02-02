@@ -5,6 +5,6 @@ import ResizeTextarea from 'react-textarea-autosize';
 export const AutoResizeTextarea = React.forwardRef<
 HTMLTextAreaElement,
 TextareaProps
->(() => {
-
+>((props, ref) => {
+    return <Textarea as={ResizeTextarea} minH='unset' ref={ref} {...props} />;
 });
