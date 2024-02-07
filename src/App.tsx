@@ -1,6 +1,8 @@
 import { Container, Heading, SimpleGrid } from "@chakra-ui/react";
 import Column from "./components/Column";
 import { ColumnType } from "./utils/enums";
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
 
 function App() {
   return (
