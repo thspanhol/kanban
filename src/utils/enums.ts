@@ -6,5 +6,5 @@ export enum ColumnType {
 }
 
 export enum ItemType {
-  TASK = 'Task',
+  TASK = "Task",
 }
