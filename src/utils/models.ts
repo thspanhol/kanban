@@ -7,4 +7,8 @@ export interface TaskModel {
   color: string;
 }
 
-export interface DragItem {}
+export interface DragItem {
+  index: number;
+  id: TaskModel['id'];
+  from: ColumnType;
+}
