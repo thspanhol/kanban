@@ -9,5 +9,9 @@ export function useTaskDragAndDrop({
     task: TaskModel;
     index: number;
 }) {
-    useDrag<>({})
+    useDrag<
+    DragItem,
+    void,
+    { isDragging: boolean }
+    >({})
 }
