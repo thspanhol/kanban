@@ -13,5 +13,11 @@ export function useTaskDragAndDrop({
     DragItem,
     void,
     { isDragging: boolean }
-    >({})
+    >({
+        type: ItemType.TASK,
+        item: { from: task.column, id: task.id, index },
+        collect: (monitor) => ({
+            isDragging: monitor.isDragging(),
+        }),
+    });
 }
