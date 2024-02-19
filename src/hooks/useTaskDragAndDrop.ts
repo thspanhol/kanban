@@ -9,7 +9,7 @@ export function useTaskDragAndDrop({
     task: TaskModel;
     index: number;
 }) {
-    useDrag<
+    const [{ isDragging }, drag] = useDrag<
     DragItem,
     void,
     { isDragging: boolean }
