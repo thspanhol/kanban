@@ -23,4 +23,10 @@ export function useTaskDragAndDrop<T extends HTMLElement>({
             isDragging: monitor.isDragging(),
         }),
     });
+
+    drag(ref);
+
+    return {
+        
+    }
 }
