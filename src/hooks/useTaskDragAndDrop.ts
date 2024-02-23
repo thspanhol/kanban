@@ -27,6 +27,7 @@ export function useTaskDragAndDrop<T extends HTMLElement>({
     drag(ref);
 
     return {
-        
+        ref,
+        isDragging,
     }
 }
