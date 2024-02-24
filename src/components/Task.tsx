@@ -1,5 +1,6 @@
 import { DeleteIcon } from "@chakra-ui/icons";
-import { Box, IconButton, Textarea } from "@chakra-ui/react";
+import { Box, IconButton } from "@chakra-ui/react";
+import { useTaskDragAndDrop } from "../hooks/useTaskDragAndDrop";
 import { TaskModel } from "../utils/models";
 import { AutoResizeTextarea } from "./AutoResizeTextArea";
 
@@ -16,6 +17,11 @@ function Task({
   onUpdate: handleUpdate,
   onDelete: handleDelete,
 }: TaskProps) {
+  const { ref, isDragging } = useTaskDragAndDrop<HTMLDivElement>({
+    task,
+    index,
+  });
+
   const handleTitleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const newTitle = e.target.value;
     handleUpdate(task.id, { ...task, title: newTitle });
