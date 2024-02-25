@@ -33,6 +33,7 @@ function Task({
 
   return (
     <Box
+      ref={ref}
       as="div"
       role="group"
       position="relative"
@@ -45,6 +46,9 @@ function Task({
       boxShadow="xl"
       cursor="grab"
       bgColor={task.color}
+      flexGrow={0}
+      flexShrink={0}
+      opacity={ isDragging ? 0.5 : 1 }
     >
       <IconButton
         position="absolute"
