@@ -15,6 +15,9 @@ function useColumnDrop(
 
       handleDrop(dragItem.from, dragItem.id);
     },
+    collect: (monitor) => ({
+      isOver: monitor.isOver(),
+    }),
   });
 }
 
