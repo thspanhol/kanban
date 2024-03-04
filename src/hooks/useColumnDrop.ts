@@ -19,6 +19,11 @@ function useColumnDrop(
       isOver: monitor.isOver(),
     }),
   });
+
+  return {
+    isOver,
+    dropRef,
+  }
 }
 
 export default useColumnDrop;
