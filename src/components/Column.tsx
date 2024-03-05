@@ -62,6 +62,7 @@ const {dropRef, isOver} = useColumnDrop(column, dropTaskFrom);
         onClick={addEmptyTask}
       />
       <Stack
+        ref={dropRef}
         direction={{ base: "row", md: "column" }}
         h={{ base: 300, md: 600 }}
         p={4}
@@ -71,6 +72,8 @@ const {dropRef, isOver} = useColumnDrop(column, dropTaskFrom);
         rounded="lg"
         boxShadow="md"
         overflow="auto"
+        alignItems="start"
+        opacity={isOver ? 0.85 : 1}
       >
         {ColumnTasks}
       </Stack>
