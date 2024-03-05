@@ -11,6 +11,7 @@ import { ColumnType } from "../utils/enums";
 import { TaskModel } from "../utils/models";
 import Task from "./Task";
 import useColumnTasks from "../hooks/useColumnTask";
+import useColumnDrop from "../hooks/useColumnDrop";
 
 const ColumnColorScheme: Record<ColumnType, string> = {
   Todo: "gray",
@@ -20,8 +21,10 @@ const ColumnColorScheme: Record<ColumnType, string> = {
 };
 
 function Column({ column }: { column: ColumnType }) {
-  const { tasks, addEmptyTask, updateTask, deleteTask } =
+  const { tasks, addEmptyTask, updateTask, deleteTask, dropTaskFrom } =
     useColumnTasks(column);
+
+const {dropRef, isOver} = useColumnDrop(column, dropTaskFrom);
 
   const ColumnTasks = tasks.map((task, index) => (
     <Task
