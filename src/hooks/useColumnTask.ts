@@ -65,6 +65,10 @@ function useColumnTasks(column: ColumnType) {
     [column, setTasks]
   );
 
+  const dropTaskFrom = useCallback(
+    
+  );
+
   return {
     tasks: tasks[column],
     addEmptyTask,
