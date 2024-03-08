@@ -66,7 +66,10 @@ function useColumnTasks(column: ColumnType) {
   );
 
   const dropTaskFrom = useCallback(
-    
+    (from: ColumnType, id: TaskModel['id']) => {
+      setTasks(() => {});
+    },
+    [column, setTasks],
   );
 
   return {
