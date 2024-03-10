@@ -69,6 +69,8 @@ function useColumnTasks(column: ColumnType) {
     (from: ColumnType, id: TaskModel['id']) => {
       setTasks((allTasks) => {
         const fromColumnTasks = allTasks[from];
+        const toColumnTasks = allTasks[column];
+        const movingTask = fromColumnTasks.find((task) => task.id === id);
       });
     },
     [column, setTasks],
