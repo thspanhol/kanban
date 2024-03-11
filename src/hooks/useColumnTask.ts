@@ -71,6 +71,9 @@ function useColumnTasks(column: ColumnType) {
         const fromColumnTasks = allTasks[from];
         const toColumnTasks = allTasks[column];
         const movingTask = fromColumnTasks.find((task) => task.id === id);
+
+        console.log(`Moving task ${movingTask?.id} from ${from} to ${column}`);
+        
       });
     },
     [column, setTasks],
