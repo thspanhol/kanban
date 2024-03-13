@@ -77,6 +77,12 @@ function useColumnTasks(column: ColumnType) {
         if (!movingTask) {
           return allTasks;
         }
+
+        return {
+          ...allTasks,
+          [from]: fromColumnTasks.filter((task) => task.id !== id),
+          [column]: [{ ...movingTask, column }, ...toColumnTasks],
+        };
         
       });
     },
