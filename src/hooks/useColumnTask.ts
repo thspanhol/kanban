@@ -94,6 +94,7 @@ function useColumnTasks(column: ColumnType) {
     addEmptyTask,
     updateTask,
     deleteTask,
+    dropTaskFrom,
   };
 }
 
