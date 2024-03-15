@@ -89,6 +89,8 @@ function useColumnTasks(column: ColumnType) {
     [column, setTasks],
   );
 
+  const swapTasks = useCallback();
+
   return {
     tasks: tasks[column],
     addEmptyTask,
