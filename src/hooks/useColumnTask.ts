@@ -89,7 +89,10 @@ function useColumnTasks(column: ColumnType) {
     [column, setTasks],
   );
 
-  const swapTasks = useCallback();
+  const swapTasks = useCallback(
+    () => {},
+    [column, setTasks],
+  );
 
   return {
     tasks: tasks[column],
