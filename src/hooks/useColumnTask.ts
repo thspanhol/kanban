@@ -90,7 +90,9 @@ function useColumnTasks(column: ColumnType) {
   );
 
   const swapTasks = useCallback(
-    () => {},
+    (i: number, j: number) => {
+      console.log(`Swapping task ${i} with ${j} in ${column} column`);
+    },
     [column, setTasks],
   );
 
