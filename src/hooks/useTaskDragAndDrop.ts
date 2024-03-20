@@ -24,6 +24,11 @@ export function useTaskDragAndDrop<T extends HTMLElement>({
         }),
     });
 
+    const [_, drop] = useDrop<DragItem, void, unknown>({
+        accept: ItemType.TASK,
+        hover: ( ) => {},
+    });
+
     drag(ref);
 
     return {
