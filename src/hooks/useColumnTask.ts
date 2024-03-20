@@ -93,7 +93,13 @@ function useColumnTasks(column: ColumnType) {
     (i: number, j: number) => {
       console.log(`Swapping task ${i} with ${j} in ${column} column`);
 
-      setTasks(() => {});
+      setTasks((allTasks) => {
+        const columnTasks = allTasks[column];
+        return {
+          ...allTasks,
+          [column]: swap(columnTasks, i, j),
+        };
+      });
     },
     [column, setTasks],
   );
@@ -104,6 +110,7 @@ function useColumnTasks(column: ColumnType) {
     updateTask,
     deleteTask,
     dropTaskFrom,
+    swapTasks,
   };
 }
 
