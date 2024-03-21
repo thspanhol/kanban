@@ -26,7 +26,11 @@ export function useTaskDragAndDrop<T extends HTMLElement>({
 
     const [_, drop] = useDrop<DragItem, void, unknown>({
         accept: ItemType.TASK,
-        hover: ( ) => {},
+        hover: (item, monitor) => {
+            if (!ref.current) {
+                return;
+            }
+        },
     });
 
     drag(ref);
