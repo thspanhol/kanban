@@ -30,6 +30,10 @@ export function useTaskDragAndDrop<T extends HTMLElement>({
             if (!ref.current) {
                 return;
             }
+
+            const draggedItemIndex = item.index;
+            const hoveredItemIndex = index;
+
         },
     });
 
