@@ -38,6 +38,9 @@ export function useTaskDragAndDrop<T extends HTMLElement>({
                 return;
             }
 
+            const isDraggedItemAboveHovered = draggedItemIndex < hoveredItemIndex;
+            const isDraggedItemAboveHovered = !isDraggedItemAboveHovered;
+
         },
     });
 
