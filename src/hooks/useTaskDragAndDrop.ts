@@ -43,6 +43,8 @@ export function useTaskDragAndDrop<T extends HTMLElement>({
 
             const { x: mouseX, y: mouseY } = monitor.getClientOffset() as XYCoord;
 
+            const hoveredBoundingRect = ref.current.getBoundingClientRect();
+
         },
     });
 
