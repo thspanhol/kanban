@@ -45,6 +45,8 @@ export function useTaskDragAndDrop<T extends HTMLElement>({
 
             const hoveredBoundingRect = ref.current.getBoundingClientRect();
 
+            const hoveredMiddleHeight = (hoveredBoundingRect.bottom - hoveredBoundingRect.top) / 2;
+
         },
     });
 
