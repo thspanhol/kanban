@@ -49,6 +49,7 @@ export function useTaskDragAndDrop<T extends HTMLElement>({
 
             const mouseYRelativeToHovered = mouseY - hoveredBoundingRect.top;
             const isMouseYAboveHoveredMiddleHeight = mouseYRelativeToHovered < hoveredMiddleHeight;
+            const isMouseYBelowHoveredMiddleHeight = mouseYRelativeToHovered > hoveredMiddleHeight;
 
         },
     });
