@@ -51,6 +51,11 @@ export function useTaskDragAndDrop<T extends HTMLElement>({
             const isMouseYAboveHoveredMiddleHeight = mouseYRelativeToHovered < hoveredMiddleHeight;
             const isMouseYBelowHoveredMiddleHeight = mouseYRelativeToHovered > hoveredMiddleHeight;
 
+
+            if (isDraggedItemAboveHovered && isMouseYAboveHoveredMiddleHeight) {
+                return;
+            }
+
         },
     });
 
