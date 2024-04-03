@@ -60,6 +60,8 @@ export function useTaskDragAndDrop<T extends HTMLElement>({
                 return;
             }
 
+            handleDropHover(draggedItemIndex, hoveredItemIndex);
+
         },
     });
 
