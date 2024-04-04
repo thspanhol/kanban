@@ -62,6 +62,8 @@ export function useTaskDragAndDrop<T extends HTMLElement>({
 
             handleDropHover(draggedItemIndex, hoveredItemIndex);
 
+            item.index = hoveredItemIndex;
+
         },
     });
 
