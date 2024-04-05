@@ -6,9 +6,11 @@ import { DragItem, TaskModel } from '../utils/models';
 export function useTaskDragAndDrop<T extends HTMLElement>({
     task,
     index,
+    handleDropHover,
 }: {
     task: TaskModel;
     index: number;
+    handleDropHover: (i: number, j: number) => void;
 }) {
     const ref = useRef<T>(null);
 
