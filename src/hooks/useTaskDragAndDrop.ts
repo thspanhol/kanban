@@ -69,7 +69,7 @@ export function useTaskDragAndDrop<T extends HTMLElement>({
         },
     });
 
-    drag(ref);
+    drag(drop(ref));
 
     return {
         ref,
