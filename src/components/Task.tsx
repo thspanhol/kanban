@@ -17,6 +17,7 @@ function Task({
   task,
   onUpdate: handleUpdate,
   onDelete: handleDelete,
+  onDropHover: handleDropHover,
 }: TaskProps) {
   const { ref, isDragging } = useTaskDragAndDrop<HTMLDivElement>({
     task,
