@@ -22,6 +22,7 @@ function Task({
   const { ref, isDragging } = useTaskDragAndDrop<HTMLDivElement>({
     task,
     index,
+    handleDropHover,
   });
 
   const handleTitleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
