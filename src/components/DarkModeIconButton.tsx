@@ -5,3 +5,5 @@ import React from 'react';
 function DarkModeIconButton() {
     
 }
+
+export default DarkModeIconButton;
