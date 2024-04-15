@@ -5,6 +5,7 @@ import React from 'react';
 function DarkModeIconButton({
     ...rest
 }: React.ComponentPropsWithoutRef<typeof IconButton>) {
+    const { colorMode, toggleColorMode } = useColorMode();
     
 }
 
