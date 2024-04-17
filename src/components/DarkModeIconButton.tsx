@@ -9,7 +9,9 @@ function DarkModeIconButton({
 
     const isDark = colorMode === 'dark';
 
-    return ();
+    return (
+        <IconButton />
+    );
     
 }
 
