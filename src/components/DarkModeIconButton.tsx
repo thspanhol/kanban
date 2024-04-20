@@ -12,6 +12,7 @@ function DarkModeIconButton({
     return (
         <IconButton
         onClick={toggleColorMode}
+        icon={isDark ? <MoonIcon /> : <SunIcon />}
         />
     );
     
