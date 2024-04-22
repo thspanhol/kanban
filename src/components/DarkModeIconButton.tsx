@@ -14,6 +14,7 @@ function DarkModeIconButton({
         onClick={toggleColorMode}
         icon={isDark ? <MoonIcon /> : <SunIcon />}
         aria-label={'dark-mode-toggle'}
+        {...rest}
         />
     );
     
