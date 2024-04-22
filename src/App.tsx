@@ -3,6 +3,7 @@ import Column from "./components/Column";
 import { ColumnType } from "./utils/enums";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
+import DarkModeIconButton from "./components/DarkModeIconButton";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       >
         Welcome to DnD Kanban
       </Heading>
+      <DarkModeIconButton position='absolute' top={0} right={2} />
       <Container maxWidth="container.lg" px={4} py={10}>
         <DndProvider backend={HTML5Backend}>
           <SimpleGrid
