@@ -9,6 +9,6 @@ export interface TaskModel {
 
 export interface DragItem {
   index: number;
-  id: TaskModel['id'];
+  id: TaskModel["id"];
   from: ColumnType;
 }
