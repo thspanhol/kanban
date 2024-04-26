@@ -51,7 +51,7 @@ function Task({
       bgColor={task.color}
       flexGrow={0}
       flexShrink={0}
-      opacity={ isDragging ? 0.5 : 1 }
+      opacity={isDragging ? 0.5 : 1}
     >
       <IconButton
         position="absolute"
