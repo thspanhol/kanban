@@ -23,7 +23,7 @@ function useColumnDrop(
   return {
     isOver,
     dropRef,
-  }
+  };
 }
 
 export default useColumnDrop;
